@@ -4,7 +4,7 @@ using PepperProject;
 
 namespace Tests
 {
-    public class Tests
+    public class GetLabelForItemForEachTests
     {
         [SetUp]
         public void Setup()
@@ -46,7 +46,7 @@ namespace Tests
                 {"macro", "3"}
             };
 
-            var label = GetLabelForDimensions.GetLabelForItemSplitted(ids, configuration);
+            var label = GetLabelForDimensions.GetLabelForItemForEach(ids, configuration);
 
             StringAssert.AreEqualIgnoringCase(label, "a/b/d.json", "OneOccurrenceFirstTupleOnCode10");
         }
@@ -86,7 +86,7 @@ namespace Tests
                 {"macro", "3"}
             };
 
-            var label = GetLabelForDimensions.GetLabelForItemSplitted(ids, configuration);
+            var label = GetLabelForDimensions.GetLabelForItemForEach(ids, configuration);
 
             StringAssert.AreEqualIgnoringCase(label, "a/b/f.json", "OneOccurrenceFirstTupleOnMicro");
         }
@@ -127,7 +127,7 @@ namespace Tests
                 {"macro", "112"}
             };
 
-            var label = GetLabelForDimensions.GetLabelForItemSplitted(ids, configuration);
+            var label = GetLabelForDimensions.GetLabelForItemForEach(ids, configuration);
 
             StringAssert.AreEqualIgnoringCase(label, "a/b/readytowear.json", "OneOccurrenceFirstTupleOnMacro");
         }
@@ -168,7 +168,7 @@ namespace Tests
                 {"macro", "3"}
             };
 
-            var label = GetLabelForDimensions.GetLabelForItemSplitted(ids, configuration);
+            var label = GetLabelForDimensions.GetLabelForItemForEach(ids, configuration);
 
             StringAssert.AreEqualIgnoringCase(label, "x/y/z.json", "OneOccurrenceSecondTupleOnCode10");
         }
@@ -208,7 +208,7 @@ namespace Tests
                 {"macro", "3"}
             };
 
-            var label = GetLabelForDimensions.GetLabelForItemSplitted(ids, configuration);
+            var label = GetLabelForDimensions.GetLabelForItemForEach(ids, configuration);
 
             StringAssert.AreEqualIgnoringCase(label, "x/y/j.json", "OneOccurrenceSecondTupleOnMicro");
         }
@@ -249,7 +249,7 @@ namespace Tests
                 {"macro", "6789"}
             };
 
-            var label = GetLabelForDimensions.GetLabelForItemSplitted(ids, configuration);
+            var label = GetLabelForDimensions.GetLabelForItemForEach(ids, configuration);
 
             StringAssert.AreEqualIgnoringCase(label, "x/y/z.json", "OneOccurrenceSecondTupleOnMacro");
         }
@@ -289,7 +289,7 @@ namespace Tests
                 {"macro", "9999"}
             };
 
-            var label = GetLabelForDimensions.GetLabelForItemSplitted(ids, configuration);
+            var label = GetLabelForDimensions.GetLabelForItemForEach(ids, configuration);
             StringAssert.AreEqualIgnoringCase(label, "a/b/f.json", "TwoOccurrencesFirstTupleOnCode10AndMicroWinMicro");
         }
 
@@ -326,7 +326,7 @@ namespace Tests
                 {"micro", "303030"},
                 {"macro", "404040"}
             };
-            var label = GetLabelForDimensions.GetLabelForItemSplitted(ids, configuration);
+            var label = GetLabelForDimensions.GetLabelForItemForEach(ids, configuration);
             StringAssert.AreEqualIgnoringCase(label, "a/b/readytowear.json",
                 "TwoOccurrencesFirstTupleOnMicroAndMacroWinMacro");
         }
@@ -364,7 +364,7 @@ namespace Tests
                 {"micro", "44444"},
                 {"macro", "55555"}
             };
-            var label = GetLabelForDimensions.GetLabelForItemSplitted(ids, configuration);
+            var label = GetLabelForDimensions.GetLabelForItemForEach(ids, configuration);
             StringAssert.AreEqualIgnoringCase(label, "a/b/readytowear.json",
                 "ThreeOccurrencesFirstTupleOnCode10AndMicroAndMacroWinMacro");
         }
@@ -402,7 +402,7 @@ namespace Tests
                 {"micro", "22222"},
                 {"macro", "999999"}
             };
-            var label = GetLabelForDimensions.GetLabelForItemSplitted(ids, configuration);
+            var label = GetLabelForDimensions.GetLabelForItemForEach(ids, configuration);
             StringAssert.AreEqualIgnoringCase(label, "x/y/j.json", "TwoOccurrencesSecondTupleOnCode10AndMicroWinMicro");
         }
 
@@ -439,7 +439,7 @@ namespace Tests
                 {"micro", "22222"},
                 {"macro", "33333"}
             };
-            var label = GetLabelForDimensions.GetLabelForItemSplitted(ids, configuration);
+            var label = GetLabelForDimensions.GetLabelForItemForEach(ids, configuration);
             StringAssert.AreEqualIgnoringCase(label, "x/y/z.json", "TwoOccurrencesSecondTupleOnMicroAndMacroWinMacro");
         }
 
@@ -476,7 +476,7 @@ namespace Tests
                 {"micro", "55555"},
                 {"macro", "66666"}
             };
-            var label = GetLabelForDimensions.GetLabelForItemSplitted(ids, configuration);
+            var label = GetLabelForDimensions.GetLabelForItemForEach(ids, configuration);
             StringAssert.AreEqualIgnoringCase(label, "x/y/z.json",
                 "ThreeOccurrencesSecondTupleOnCode10AndMicroAndMacroWinMacro");
         }
