@@ -35,11 +35,10 @@ namespace PepperProject
             Dictionary<string, string> ids = new Dictionary<string, string> {
                 { "code10", "100" },
                 { "micro", "2" },
-                { "macro", "3" }
+                { "macro", "4" }
             };
 
-            var label = GetLabelForDimensions.GetLabelForItemSplitted(ids, configuration);
-            // var res = configuration.Values.First(p => p.Keys.Count(q => q.Contains("6")) > 0).Values.ToList()[0];
+            var label = GetLabelForDimensions.GetLabelForItem(ids, configuration);
 
             Console.WriteLine(label);
         }

@@ -1,10 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PepperProject
 {
     public static class GetLabelForDimensions
     {
+        public static string GetLabelForItem(Dictionary<string, string> dimensions,
+            Dictionary<string, Dictionary<string[], string[]>> configuration)
+        {
+            //var result = configuration.Where(x => x.Value.Where(y => y.Key.Contains(dimensions["macro"])).Select(z => z.Value).Count() > 0);
+            //var result = configuration.ToList().ForEach(x => x.Key.Contains(dimensions["code10"])
+            //    .Select(x => x.Value).DefaultIfEmpty(new string[] { }).Single());
+            return "";
+        }
         public static string GetLabelForItemForEach(Dictionary<string, string> dimensions,
             Dictionary<string, Dictionary<string[], string[]>> configuration)
         {
